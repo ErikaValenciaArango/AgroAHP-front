@@ -1,0 +1,52 @@
+.main {
+    display: flex;
+    background: #008f39;
+    align-items: center;
+    }
+
+.principal{
+    flex-direction: column;
+    display: flex;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.h1-i {
+    margin: 0 0 0 0;
+    margin-left: 190px;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 56px;
+    color: black;
+  }
+
+    .logo {
+      max-height: 50px;
+    }
+    
+    .cta-buttonn {
+      font-family: "Jost", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 1px;
+      padding: 10px 28px 11px 28px;
+      margin: 30px 0 0 0;
+      border-radius: 50px;
+      transition: 0.5s;
+      grid-template-rows: auto;
+      margin-left: 100px;
+      color: black;
+      background: #39FF14;
+      border-color: #fff;
+      width: 100%;
+    }
+  
+    .cta-buttonn:hover {
+      background: #b0fc38;
+    }
+    
+    .img{
+      margin-left: 10px;
+      max-width: 100px;
+    }
+  

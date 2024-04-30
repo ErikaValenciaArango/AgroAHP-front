@@ -1,0 +1,26 @@
+.criteria-rating-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.matrix-container,
+.chart-container {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chart-container {
+  margin-left: 20px; /* Espacio entre la matriz y el gráfico */
+}
+
+.table {
+  width: 100%;
+}
+
+canvas {
+  max-width: 200px;
+}

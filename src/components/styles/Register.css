@@ -1,0 +1,97 @@
+.mainRegister{
+    font-family: Arial, sans-serif;
+    background-color: #008f39;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    height: 150vh;
+}
+
+form {
+    background-color: #fff;
+    margin: 10px 70px 70px 70px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    margin: 15px 0px 0px 0px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 6px;
+    margin: 5px 0px 0px 0px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #aef359;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.h1-register{
+    text-align: center;
+}
+
+.error-message {
+    font-size: 12.5px;
+    font-weight: bold;
+    color: var(--danger--red);
+}
+.success-message {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--is--correct);
+}
+
+.checkregister {
+    width: 1em;
+    height: 1em;
+    border-radius: 0.15em;
+    margin-right: 0.5em;
+    border: 0.15em solid ;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.txtchregister {
+    color: var(--select--dark-blue);
+    font-size: 12px;
+    font-weight: bold;
+    display: inline;
+}
+
+.btnregister {
+    width: 90%;
+    height: 25%;
+    display: flex;
+    padding: 15px 30px;
+    border: none;
+    background-color: #aef359;
+    box-shadow: 2px 2px 0.5px 0.5px ;
+    color: white;
+    justify-content: center;
+    margin: auto;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 5px;
+    &:disabled{
+        opacity: 0.5;
+        cursor: none;
+        &:hover{
+            background-color: #aef359;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+/* Alternativas.css */
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-container input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.input-container button {
+    padding: 10px 20px;
+    background-color: #b0fc38;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.alternativas-list {
+    margin-top: 20px;
+}
+
+.alternativa-item {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alternativa-item-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.alternativa-item-buttons button {
+    margin-left: 5px; /* Ajustar margen izquierdo para el botón "Editar" */
+}
+
+/* Opcional: Ajustar tamaño y estilos de los botones */
+.alternativa-item-buttons button {
+    padding: 8px 12px;
+    border-radius: 3px;
+}

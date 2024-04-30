@@ -1,0 +1,9 @@
+.criteria-rating-box {
+    max-width: 500px; /* Define el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+  }
+  
+  canvas {
+    max-width: 100%; /* Hace que el canvas ocupe el ancho máximo del contenedor */
+    height: auto; /* Permite que la altura del canvas se ajuste automáticamente según el ancho */
+  }
