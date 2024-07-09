@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import Main from './components/Main';
+import Sobre from './components/Sobre';
 import LoginScreen from './components/Login';
 import Register from './components/Register';
 import Principal from './components/Principal';
@@ -11,6 +12,8 @@ import Modelos from './components/Modelos';
 import Decision from './components/Decision';
 import Alternativas from './components/Alternativas';
 import Pruebas from './components/pruebas';
+import Perfil from './components/Perfil';
+import Historial from './components/historial';
 import { useLogin } from './contexts/useLogin';
 
 function App() {
@@ -24,17 +27,22 @@ function App() {
       {isLogged && (
         <>
           <Route path="/" element={<Main />} />
+          <Route path="/sobre-agroahp" element={<Sobre />} />
           <Route path="/principal" element={<Principal />} />
+          <Route path="/perfil" element={<Perfil />} />
           <Route path="/criterios" element={<Criterios />} />
           <Route path="/modelos" element={<Modelos />} />
           <Route path="/decision" element={<Decision />} />
           <Route path="/alternativas" element={<Alternativas />} />
+          <Route path="/historial" element={<Historial />} />
+          <Route path="/pruebas" element={<Pruebas />} />
         </>
       )}
       {
         !isLogged && (
           <>
             <Route path="/" element={<Main />} />
+            <Route path="/sobre-agroahp" element={<Sobre />} />
             <Route path="/login" element={<LoginScreen />} />
             <Route path="/register" element={<Register />} />
             <Route path="/pruebas" element={<Pruebas />} />

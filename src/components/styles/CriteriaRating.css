@@ -8,7 +8,7 @@
 .matrix-container,
 .chart-container {
   flex: 1;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -22,5 +22,12 @@
 }
 
 canvas {
-  max-width: 200px;
+  max-width: 400px;
 }
+
+#myChart {
+  width: 350px;
+  height: 350px;
+}
+
+

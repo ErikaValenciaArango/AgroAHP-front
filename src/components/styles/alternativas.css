@@ -1,4 +1,38 @@
 /* Alternativas.css */
+.graficos-container {
+    display: flex;
+}
+
+.botones {
+    float: right;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper input {
+    margin-right: 8px; /* Espacio entre el campo de entrada y el botón de Agregar */
+}
+
+.sugerencias-container {
+    margin-left: 16px; /* Espacio entre el campo de entrada y el botón de Sugerencias */
+}
+
+.sugerencias-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sugerencias-list li {
+    cursor: pointer;
+    padding: 8px;
+}
+
+.sugerencias-list li:hover {
+    background-color: #f0f0f0;
+}
 
 .input-container {
     display: flex;
@@ -47,3 +81,69 @@
     padding: 8px 12px;
     border-radius: 3px;
 }
+
+.graficosBarras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Espacio entre los gráficos */
+}
+
+.graficoBarra {
+    flex: 1;
+    max-width: 45%; /* Ajusta el tamaño según tus necesidades */
+}
+
+.ranking-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ranking-item {
+    margin-bottom: 15px;
+}
+
+.ranking-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.ranking-card:hover {
+    transform: translateY(-5px);
+}
+
+.ranking-position {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-right: 15px;
+}
+
+.ranking-content {
+    flex-grow: 1;
+}
+
+.ranking-content h4 {
+    margin: 0;
+    color: #333;
+}
+
+.ranking-content p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+

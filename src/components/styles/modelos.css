@@ -3,7 +3,7 @@
 }
 
 .criterio-item {
-    padding: 10px;
+    padding: 20px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -16,3 +16,6 @@
     background-color: #e0e0e0;
 }
 
+.botonesModelos {
+    float: right;
+}

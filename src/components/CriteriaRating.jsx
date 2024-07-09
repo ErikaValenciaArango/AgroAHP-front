@@ -250,11 +250,13 @@ const CriteriaRating = () => {
         <thead>
           <tr>
             <th>¿Cuál criterio es más importante?</th>
+            <th>Seleccione</th>
             <th>¿Cuánto más importante es el criterio?</th>
           </tr>
         </thead>
         <tbody>
           <tr>
+            <td>Precio o Impacto ambiental</td>
             <td>
               <select
                 value={criterion1.selected}
@@ -277,6 +279,7 @@ const CriteriaRating = () => {
             </td>
           </tr>
           <tr>
+            <td>Precio o Toxicidad</td>
             <td>
               <select
                 value={criterion2.selected}
@@ -299,6 +302,7 @@ const CriteriaRating = () => {
             </td>
           </tr>
           <tr>
+            <td>Impacto ambiental o Toxicidad</td>
             <td>
               <select
                 value={criterion3.selected}
@@ -322,6 +326,10 @@ const CriteriaRating = () => {
           </tr>
         </tbody>
       </table>
+        <p className="ahp-description">
+          En esta sección, se le pide que compare los criterios utilizando la escala AHP (Proceso de Análisis Jerárquico). La escala de valoración va del 1 al 9, donde:
+          1: Igual importancia, 3: Importancia moderada, 5: Importancia fuerte, 7: Importancia muy fuerte, 9: Importancia extrema, 2, 4, 6, 8: Valores intermedios entre las preferencias adyacentes
+      </p>
       <button onClick={calculateMatrixAHP}>Calcular Matriz AHP</button>
       <div className="criteria-rating-container">
         <div className="matrix-container">
@@ -340,7 +348,7 @@ const CriteriaRating = () => {
         </div>
         <div className="chart-container">
           <h3>Gráfico de Porcentajes</h3>
-          <canvas id="myChart" width="100" height="100"></canvas>
+          <canvas id="myChart"></canvas>
         </div>
       </div>
       <button type="submit" className="btnregister" disabled={btndisabled()} onClick={handleSubmit}>Guardar modelo</button>

@@ -6,43 +6,24 @@ import './styles/modelos.css'; // Importar estilos CSS
 const Modelos = () => {
     const loginData = JSON.parse(localStorage.getItem('login'));
     const userId = loginData ? loginData.user._id : null;
-    const [criterios, setCriterios] = useState([]);
+    const [decisiones, setDecisiones] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [successR, setSuccessR] = useState(" ");
-
-    
-    const eliminarModelo = async (criterioId) => {
-        axios({
-            method: 'post',
-            url: `${process.env.REACT_APP_BACKEND_URL}/deleteCriteria`,
-            data: {
-                criteriaId : criterioId,
-            }
-        }).then(function (response) {
-            /*localStorage.setItem("register", JSON.stringify(response.data))//guarda en el local storege
-            window.location.reload()*/
-            setSuccessR("Registro exitoso, ahora puedes iniciar sesion");
-            //console.log('Registro exitoso');
-        }).catch(function (error) {
-            setError(error.response.data.error);
-            console.log(error)
-        })
-    };
     
 
     useEffect(() => {
-        const obtenerCriterios = async () => {
+        const obtenerDecisiones = async () => {
             setLoading(true);
             setError(null);
 
             try {
-                const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/getCriteriaByUser`, {
-                    criteria_user: userId,
+                const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/getAlternativesByUser`, {
+                    alternative_user: userId,
                 });
-                setCriterios(response.data);
+                setDecisiones(response.data);
             } catch (error) {
-                setError('Error al obtener los criterios.');
+                setError('Error al obtener las decisiones.');
                 console.error(error);
             } finally {
                 setLoading(false);
@@ -50,7 +31,7 @@ const Modelos = () => {
         };
 
         if (userId) {
-            obtenerCriterios();
+            obtenerDecisiones();
         }
     }, [userId]);
 
@@ -58,9 +39,6 @@ const Modelos = () => {
         return <p>No estás autenticado.</p>;
     }
 
-    const editarModelo = () => {
-
-    };
 
     return (
         <div>
@@ -78,24 +56,27 @@ const Modelos = () => {
             </nav>
 
             <div className="criterios-list">
-                <h2>Listado de Modelos de Criterios</h2>
+                <h2>Listado de Decisiones</h2>
                 {loading ? (
                     <p>Cargando...</p>
                 ) : error ? (
                     <p>{error}</p>
                 ) : (
                     <div className="criterios-container">
-                        {criterios.map(criterio => (
-                            <div key={criterio._id} className="criterio-item">
-                                {criterio.criteria_name}
-                                <div className="botonesModelos">
-                                    <button onClick={() => eliminarModelo(criterio._id)} >Eliminar</button>
-                                    <button onClick={() => editarModelo()} >Editar</button>
-                                </div>
-                            </div>
-                        ))}
-
+                    {decisiones.map(decision => (
+                        <div key={decision._id} className="criterio-item">
+                        <h3>Nombre u objetivo de la decisión:</h3>
+                        <p>{decision.alternative_name}</p>
+                        <h3>Ranking:</h3>
+                        <ul>
+                            {decision.alternative.map((alt, index) => (
+                            <li key={index}>{alt}</li>
+                            ))}
+                        </ul>
+                        </div>
+                    ))}
                     </div>
+
                 )}
             </div>
         </div>
@@ -103,5 +84,3 @@ const Modelos = () => {
 };
 
 export default Modelos;
-
-
